@@ -1,0 +1,513 @@
+/*============================================*/
+/************** 1.0 - Variable Css ************/
+/*==========================================*/
+:root {
+  --primary-color: #3c8dbc;
+  --primary-hover-color: #2daffb;
+  --secondary-color: #dd4b39;
+  --white-color: #ffffff;
+  --sidebar-bg: #222d32;
+  --sidebar-item-hover: #146492;
+  --delete-color: #d22137;
+  --delete-hover-color: #b11327;
+  --color-one: #31708f;
+  --color-two: #a94442;
+  --color-three: #ff851b;
+  --color-four: #d81b60;
+}
+/*============================================*/
+/************** 2.0 - Default Css ************/
+/*==========================================*/
+
+* {
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  line-height: 1.7em;
+  font-weight: 400;
+  background: #e6e6e6;
+  transition: all 0.5s ease;
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  background: #3bc9d6;
+  color: #fff;
+}
+
+::selection {
+  background: #3bc9d6;
+  color: #fff;
+}
+
+a {
+  border: 0px solid transparent;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  /* color: #3bc9d6; */
+}
+
+a:hover {
+  /* color: #3bc9d6; */
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.33em;
+  font-weight: 600;
+  margin-bottom: 0px;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child {
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 20px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 1em;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.color1 {
+  color: var(--color-one);
+}
+
+.color2 {
+  color: var(--color-two);
+}
+
+.color3 {
+  color: var(--color-three);
+}
+
+.color4 {
+  color: var(--color-four);
+}
+
+/*============================================*/
+/************** 3.0 - Navbar Css ************/
+/*==========================================*/
+#nav .bg-light {
+  padding: 10px 30px;
+  background-color: var(--primary-color) !important;
+}
+
+.navbar .navbar-brand {
+  color: var(--white-color);
+}
+
+.navbar .navbar-brand:hover {
+  color: var(--white-color);
+}
+
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: var(--white-color);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--white-color);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--white-color);
+}
+
+/*============================================*/
+/************** 4.0 - Sidebar Css ************/
+/*==========================================*/
+#sidebar {
+  width: 265px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--sidebar-bg);
+  overflow: hidden;
+  transition: 0.5s;
+  padding-top: 40px;
+  margin-top: 52px;
+}
+
+#sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #b8c7ce;
+  display: block;
+  transition: 0.3s;
+}
+
+#sidebar a:hover {
+  color: var(--white-color);
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  display: none;
+}
+
+.closebtn::after {
+  content: "×";
+  position: absolute;
+  top: 18px;
+  right: 0;
+  font-size: 30px;
+  font-weight: 500;
+  display: none;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px 15px;
+  border: none;
+  display: none;
+}
+
+.openbtn:hover {
+  background-color: var(--primary-color);
+}
+
+.sidebar-items li {
+  margin-bottom: 15px;
+}
+
+.sidebar-items li a:hover {
+  background: #1e282c;
+}
+
+.sub-menu-items {
+  padding-left: 15px;
+}
+
+.sub-menu-items li {
+  margin-bottom: 0px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+/*============================================*/
+/************** 5.0 - Content Css ************/
+/*==========================================*/
+#content {
+  margin-left: 22%;
+  /*margin-top: 30px;*/
+}
+
+/************** 5.0 - Dashboard Css ************/
+.dashboard-section {
+  background: var(--primary-color);
+  padding: 15px 23px 5px;
+  border: 1px solid var(--primary-color);
+  color: #fff;
+  overflow: hidden;
+}
+
+.dashboard-icon {
+  font-size: 30px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  border: 1px solid #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  text-align: center;
+  padding-top: 13px;
+}
+
+.bg-color {
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.dashboard-section .details {
+  padding-top: 15px;
+}
+
+.dashboard-section .details h5 {
+  margin-bottom: 10px;
+}
+
+.dashboard-section .details p {
+  font-size: 18px;
+}
+
+.page-title {
+  padding-bottom: 10px;
+}
+
+/************** 6.0 - User Table Css ************/
+.user-table {
+  background: var(--white-color);
+  border: 1px solid #ccc;
+  padding: 0 30px;
+}
+
+.page-title {
+  margin-bottom: 20px;
+}
+
+.title-and-search {
+  overflow: hidden;
+}
+
+.title-and-search .page-title {
+  float: left;
+  font-size: 20px;
+}
+
+.title-and-search .search-user {
+  margin-bottom: 15px;
+  float: right;
+}
+
+.search-user input:focus {
+  outline: none;
+}
+
+.search-user .form-control:focus {
+  border-color: #ccc;
+  box-shadow: none;
+}
+
+.period {
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  height: 40px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  overflow: hidden;
+}
+
+.buttons .add-user {
+  float: left;
+  margin-right: 30px;
+}
+
+.add-user a {
+  padding: 10px 15px;
+  background: var(--primary-color);
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.add-user a:hover {
+  background: var(--primary-hover-color);
+}
+
+.delete-user a {
+  padding: 10px 15px;
+  background: var(--delete-color);
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.delete-user a:hover {
+  background: var(--delete-hover-color);
+}
+
+.action-btn {
+  padding: 10px 30px;
+  background: var(--primary-color);
+  color: #fff;
+  display: inline-block;
+}
+
+/************** 7.0 - Edit User Css ************/
+.edit-form {
+  padding: 30px;
+  margin-bottom: 30px;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.edit-form input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid var(--primary-color);
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  overflow: hidden;
+}
+
+.buttons .cancle-btn a {
+  float: left;
+}
+
+.buttons .save-btn a {
+  float: right;
+}
+
+.cancle-btn a {
+  padding: 5px 10px;
+  border: 1px solid var(--primary-color);
+  background: #ddd;
+  color: #222;
+  display: inline-block;
+}
+
+.save-btn a,
+.save-btn [type='submit']{
+  padding: 5px 15px;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: #fff;
+  display: inline-block;
+  line-height: 1.7em;
+}
+
+/************** 8.0 - Login Css ************/
+#login {
+  padding-top: 60px;
+}
+
+.login-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.remember {
+  margin-bottom: 10px;
+}
+
+.remember input {
+  width: auto;
+  height: auto;
+}
+
+/************** 9.0 - Admin Css ************/
+.admin-title {
+  padding-bottom: 20px;
+}
+
+.search-user {
+  margin-bottom: 30px;
+}
+
+#reseller-list .search-user input {
+  width: 30%;
+}
+
+select {
+  width: 100%;
+  height: 40px;
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.edit-form select {
+  border: 1px solid var(--primary-color);
+}
+
+.change-logo {
+  height: 100px;
+  width: 200px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.change-logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.brand-name {
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+textarea {
+  border: 1px solid var(--primary-color);
+  height: 150px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.dashboard-section .details ul li a {
+  color: var(--white-color);
+}
+
+.dashboard-section {
+  margin-bottom: 30px;
+}
